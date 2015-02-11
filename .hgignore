@@ -1,0 +1,12 @@
+# use glob syntax
+syntax: glob
+
+# Ignore patterns
+.metadata\
+bin\
+gen\
+gradlew.bat
+gradlew
+gradle/wrapper/gradle-wrapper.properties
+gradle/wrapper/gradle-wrapper.jar
+build.gradle

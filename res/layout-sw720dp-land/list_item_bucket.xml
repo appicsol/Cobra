@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_holder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corner" >
+
+    <TextView
+        android:id="@+id/txt_buckerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="5dp"
+        android:text="@string/bucket_name"
+        android:textSize="27sp" />
+
+    <com.cobra.views.ModulesContainer
+        android:id="@+id/labelcontainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/layout_firing_container"
+        android:layout_toRightOf="@+id/txt_buckerName" >
+
+        <TextView
+            android:id="@+id/btn_addtag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/round_corner"
+            android:text="@string/add_label"
+            android:textSize="19sp" />
+    </com.cobra.views.ModulesContainer>
+
+    <Button
+        android:id="@+id/btn_randomfire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_corner"
+        android:text="@string/fire"
+        android:textSize="19sp"
+        android:visibility="gone" />
+
+    <com.cobra.views.ModulesContainer
+        android:id="@+id/modulecontainer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/labelcontainer"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/layout_firing_container" >
+    </com.cobra.views.ModulesContainer>
+
+    <LinearLayout
+        android:id="@+id/layout_firing_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:visibility="visible" >
+
+        <com.cobra.classes.MySpinner
+            android:id="@+id/bucket_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/round_corner" />
+
+        <Button
+            android:id="@+id/btn_fire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fire"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_medium" />
+
+        <Button
+            android:id="@+id/btn_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pause"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_medium" />
+
+        <LinearLayout
+            android:id="@+id/layout_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:padding="4dp"
+                android:text="@string/time"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:padding="4dp"
+                android:text="@string/fired_text"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/time_ms_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
+                android:text="@string/ms_text"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:baselineAligned="false"
+            android:weightSum="2" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/fired_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="@string/fired"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="@dimen/text_small"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/remain_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="@string/remain"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="@dimen/text_small"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/fired_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="@string/fired_text"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="@dimen/text_small"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/remain_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="@string/remain_text"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="@dimen/text_small"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

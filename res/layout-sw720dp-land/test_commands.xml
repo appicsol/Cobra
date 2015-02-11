@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="3" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="18R2 Communication on Serial Port"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:checked="true"
+            android:text="ToggleButton"
+            android:textOff="Hexa"
+            android:textOn="Decimal" />
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/button_container"
+            android:layout_below="@+id/toggleButton1"
+            android:background="@android:color/black" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/writing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/black"
+                    android:enabled="false"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:weightSum="2" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="6" >
+
+                <Button
+                    android:id="@+id/force_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="Force Refresh" />
+
+                <Button
+                    android:id="@+id/module_data_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="Module Data Refresh" />
+
+                <Button
+                    android:id="@+id/all_data_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="All Data Refresh" />
+
+                <Button
+                    android:id="@+id/set_arm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="SET ARM" />
+
+                <Button
+                    android:id="@+id/set_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="SET TEST" />
+
+                <Button
+                    android:id="@+id/get_device_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="Get Device Status" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:weightSum="4" >
+
+                <Button
+                    android:id="@+id/ack_status_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="ACK 01" />
+
+                <Button
+                    android:id="@+id/req_fire_cues"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="REQ Fire cue Data" />
+
+                <Button
+                    android:id="@+id/req_module_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="REQ Module Data" />
+
+                <Button
+                    android:id="@+id/req_device_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="REQ Device Status" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <Button
+                    android:id="@+id/VCOM_ACKNOWLEDGE_STATUS_CHANGE_1_0_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:text="ACK STAT (1, 0, 0)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/VCOM_REQ_DEVICE_STATUS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_red_light"
+                    android:text="REQ DEVICE STATUS"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/ACK_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="ACK STAT (1)"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/VCOM_REQ_ALL_DATA_REFRESH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="1dp"
+                    android:text="REQ ALL DATA REFRESH"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/VCOM_ACKNOWLEDGE_STATUS_CHANGE_0_1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="ACK STAT (0, 1, 1)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/VCOM_ACKNOWLEDGE_STATUS_CHANGE_0_1_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="ACK STAT (0, 1, 4)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_save_logs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:text="Save Logs" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="4" >
+
+                <Button
+                    android:id="@+id/VCOM_ACKNOWLEDGE_STATUS_CHANGE_0_2_100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="ACK STAT (0, 2, 100)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/VCOM_ACKNOWLEDGE_STATUS_CHANGE_0_3_100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="ACK STAT (0, 3, 100)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/VCOM_REQ_QUEUED_FIREDCUES_DATA__1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="REQ QUEUED FIREDCUES (-1)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/VCOM_REQ_QUEUED_FIREDCUES_DATA_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="REQ QUEUED FIREDCUES (4)"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="4" >
+
+                <Button
+                    android:id="@+id/VCOM_REQ_QUEUED_MODULE_DATA__1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="REQ QUEUED MODULE (-1)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/VCOM_REQ_QUEUED_MODULE_DATA_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="REQ QUEUED MODULE (1)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/VCOM_REQ_QUEUED_MODULE_DATA_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="REQ QUEUED MODULE (2)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/VCOM_REQ_QUEUED_MODULE_DATA_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="1dp"
+                    android:text="REQ QUEUED MODULE (3)"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

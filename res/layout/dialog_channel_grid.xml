@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_top"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/corner"
+    android:gravity="center"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btn_showall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/showcontrols_textsize"
+                android:text="@string/dialog_channelgrid_showall" />
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/showcontrols_textsize"
+                android:layout_alignParentRight="true"
+                android:text="Close" />
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/layout_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+          
+            android:layout_gravity="center_horizontal"
+            android:columnCount="10"
+            android:rowCount="10" >
+
+        </GridLayout>
+    </LinearLayout>
+
+</ScrollView>

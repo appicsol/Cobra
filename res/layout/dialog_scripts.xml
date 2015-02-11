@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Loading Scripts"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_x_large"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/text_dash1"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="10dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/text_message1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_dash1"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text="Scripts are loading"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/text_message2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_message1"
+        android:gravity="center_horizontal"
+        android:text="0/0 Scripts and 0/0 events are loaded."
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/text_message3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_message2"
+        android:gravity="center_horizontal"
+        android:text="Please wait..."
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/text_dash2"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/text_message3"
+        android:layout_marginTop="15dp"
+        android:background="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_dash2"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp" >
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_large"
+            android:text="   Close   " />
+
+    </RelativeLayout>
+
+</RelativeLayout>

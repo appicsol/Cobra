@@ -1,0 +1,230 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:id="@+id/layout_row_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_row_data_margin"
+        android:background="@drawable/modulerow_row"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvDevice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="@string/moduel_row_device"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="@string/moduel_row_addr"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tvRemoteChannel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="@string/moduel_row_ch"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tvKeyPosition"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="@string/moduel_row_key_pos"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvMode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="@string/moduel_row_mode"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSignal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="@string/moduel_row_sig"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvBattery1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="@string/moduel_row_1p"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/tvBattery2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="@string/moduel_row_2p"
+            android:textSize="@dimen/text_size" />
+
+        <TableLayout
+            android:id="@+id/cuesParentLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="horizontal"
+            android:stretchColumns="0,1,2,3,4,5" >
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_vertical" />
+
+            <TableRow android:id="@+id/tableRow1" >
+
+                <TextView
+                    android:id="@+id/tvCue1"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/tvCue2"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="2" />
+
+                <TextView
+                    android:id="@+id/tvCue3"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="3" />
+
+                <TextView
+                    android:id="@+id/tvCue4"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="4" />
+
+                <TextView
+                    android:id="@+id/tvCue5"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="5" />
+
+                <TextView
+                    android:id="@+id/tvCue6"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="6" />
+            </TableRow>
+
+            <TableRow android:id="@+id/tableRow2" >
+
+                <TextView
+                    android:id="@+id/tvCue7"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="7" />
+
+                <TextView
+                    android:id="@+id/tvCue8"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="8" />
+
+                <TextView
+                    android:id="@+id/tvCue9"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="9" />
+
+                <TextView
+                    android:id="@+id/tvCue10"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="10" />
+
+                <TextView
+                    android:id="@+id/tvCue11"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="11" />
+
+                <TextView
+                    android:id="@+id/tvCue12"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="12" />
+            </TableRow>
+
+            <TableRow android:id="@+id/tableRow3" >
+
+                <TextView
+                    android:id="@+id/tvCue13"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="13" />
+
+                <TextView
+                    android:id="@+id/tvCue14"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="14" />
+
+                <TextView
+                    android:id="@+id/tvCue15"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="15" />
+
+                <TextView
+                    android:id="@+id/tvCue16"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="16" />
+
+                <TextView
+                    android:id="@+id/tvCue17"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="17" />
+
+                <TextView
+                    android:id="@+id/tvCue18"
+                    android:background="@drawable/modulerow_cue_default"
+                    android:gravity="center"
+                    android:text="18" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>

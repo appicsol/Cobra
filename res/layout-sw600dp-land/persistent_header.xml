@@ -1,0 +1,237 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@drawable/persistent_header"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText" >
+
+    <FrameLayout
+        android:id="@+id/layout_imageDrawerOpen"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:visibility="visible" >
+
+        <ImageButton
+            android:id="@+id/imageDrawerOpen"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:contentDescription="drawerOpenButton"
+            android:paddingRight="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_navigation_drawer" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/layout_imageDrawerOpen"
+        android:gravity="left"
+        android:text="Device List"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/showcontrols_textsize_large"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/layout_device_info_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/header_container_height"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/header_device_container_margin_right"
+        android:layout_toLeftOf="@+id/layout_18R2_info_container"
+        android:background="@drawable/round_corner_grey" >
+
+        <TextView
+            android:id="@+id/lbl_devices"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/header_container_items_margin_bottom"
+            android:layout_marginLeft="@dimen/header_container_items_margin"
+            android:layout_marginTop="@dimen/header_container_items_margin"
+            android:background="#dbdbdb"
+            android:gravity="center"
+            android:paddingLeft="@dimen/header_container_heading_padding"
+            android:paddingRight="@dimen/header_container_heading_padding"
+            android:text="Devices"
+            android:textSize="@dimen/showcontrols_textsize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lbl_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/lbl_devices"
+            android:paddingLeft="@dimen/header_container_items_padding"
+            android:text="Total: "
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lbl_total_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/lbl_total"
+            android:paddingRight="@dimen/header_container_items_padding"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize" />
+
+        <TextView
+            android:id="@+id/lbl_arm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/lbl_total_value"
+            android:paddingLeft="@dimen/header_container_items_padding"
+            android:text="Arm: "
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNumModulesArmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/lbl_arm"
+            android:paddingRight="@dimen/header_container_items_padding"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize" />
+
+        <TextView
+            android:id="@+id/lbl_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvNumModulesArmed"
+            android:paddingLeft="@dimen/header_container_items_padding"
+            android:text="Test: "
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNumModulesTest"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/lbl_test"
+            android:paddingRight="@dimen/header_container_items_padding"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_18R2_info_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/header_container_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/header_18R2_container_margin_right"
+        android:background="@drawable/round_corner_grey"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/lbl_18R2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/header_container_items_margin_bottom"
+            android:layout_marginLeft="@dimen/header_container_items_margin"
+            android:layout_marginTop="@dimen/header_container_items_margin"
+            android:background="#dbdbdb"
+            android:gravity="center"
+            android:paddingLeft="@dimen/header_container_heading_padding"
+            android:paddingRight="@dimen/header_container_heading_padding"
+            android:text="18R2"
+            android:textSize="@dimen/showcontrols_textsize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lbl_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/lbl_18R2"
+            android:paddingLeft="@dimen/header_container_items_padding"
+            android:text="Mode: "
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvArmedStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/lbl_mode"
+            android:paddingRight="@dimen/header_container_items_padding"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/green_modulelist"
+            android:textSize="@dimen/showcontrols_textsize" />
+
+        <TextView
+            android:id="@+id/lbl_channel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvArmedStatus"
+            android:paddingLeft="@dimen/header_container_items_padding"
+            android:text="Channel: "
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRemoteChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/lbl_channel"
+            android:paddingRight="@dimen/header_container_items_padding"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize" />
+
+        <TextView
+            android:id="@+id/tvProgressBattery_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvRemoteChannel"
+            android:paddingRight="@dimen/header_container_items_padding"
+            android:text="Battery:"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:id="@+id/tvProgressBattery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvProgressBattery_header"
+            android:paddingRight="@dimen/header_container_items_padding"
+            android:text=" "
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

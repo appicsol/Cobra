@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="3" >
+
+    <RelativeLayout
+        android:id="@+id/layout_cue_continer"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/txt_heading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_light"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Cues"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/showcontrols_textsize_large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_filter_by"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_heading"
+            android:padding="10dp"
+            android:text="Filter By"
+            android:textSize="@dimen/showcontrols_textsize" />
+
+        <LinearLayout
+            android:id="@+id/layout_cue_column"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_filter_by"
+            android:background="@android:color/darker_gray"
+            android:divider="@drawable/divider_cue_column"
+            android:dividerPadding="@dimen/cue_column_divider"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:weightSum="6" >
+
+            <TextView
+                android:id="@+id/label_channel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Ch."
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/showcontrols_textsize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/label_cues"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Cues"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/showcontrols_textsize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/label_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.8"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Group"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/showcontrols_textsize"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/layout_cue_column" >
+
+            <TableLayout
+                android:id="@+id/layout_table_cues"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@android:color/white"
+                android:dividerPadding="1dp" >
+            </TableLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>
