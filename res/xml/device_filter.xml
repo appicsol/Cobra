@@ -1,4 +1,0 @@
-<resources>
-<!--  0x0403 / 0x6001: CDC ACM  -->
-<usb-device vendor-id="9476" product-id="768"/>
-</resources>
